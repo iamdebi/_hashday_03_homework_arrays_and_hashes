@@ -68,4 +68,12 @@ users = {
 users["Jonathan"][:twitter]
 users["Erik"][:home_town]
 users["Erik"][:lottery_numbers]
-p users["Avril"][:pets]
+users["Avril"][:pets][0][:species]
+users["Erik"][:lottery_numbers].sort!.first
+users["Avril"][:lottery_numbers].select(&:even?)
+users["Erik"][:lottery_numbers].push(7)
+users["Erik"][:home_town] = "Edinburgh"
+users["Erik"][:pets].push(:name => "Fluffy", :species => "dog")
+users["Debbie"] = [:twitter => "DebbieCodes", :home_town => "Dundee"]
+p users
+#.push(name: "Dog", species: "Fluffy")
